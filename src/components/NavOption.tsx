@@ -1,9 +1,16 @@
 import React from "react";
+interface NavOptionProps {
+  title: string;
+  Icon: any;
+  selected?: boolean;
+}
 
 const NavOption = () => {
   return (
-    <div>
-      <div></div>
-    </div>
+    <>
+      <div>
+        <h1></h1>
+      </div>
+    </>
   );
 };
