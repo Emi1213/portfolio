@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import NavOption from "../components/NavOption";
+import HomeRounded from "@mui/icons-material/HomeRounded";
+import Person2Rounded from "@mui/icons-material/Person2Rounded";
+import BadgeRoundedIcon from "@mui/icons-material/BadgeRounded";
 ---
 
 <!doctype html>
@@ -17,11 +21,19 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="bg-red-500">
-			<ul>
+		<nav class="bg-black">
+			<ul class="flex justify-center items-center h-20">
 				<li>
-					<a href="/">Home</a>
-
+					<NavOption title='Home'  href='home' selected={true} />
+				</li>
+				<li>
+					<NavOption title='About' href='about' />
+				</li>
+				<li>
+					<NavOption title='Contact' href='contact' />
+				</li>
+				<li>
+					<NavOption title='Projects' href='projects' />
 				</li>
 			</ul>
 		</nav>

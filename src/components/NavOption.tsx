@@ -1,16 +1,18 @@
 import React from "react";
 interface NavOptionProps {
   title: string;
-  Icon: any;
   selected?: boolean;
+  href: string;
 }
 
-const NavOption = () => {
+const NavOption = ({ title, selected, href }: NavOptionProps) => {
   return (
-    <>
-      <div>
-        <h1></h1>
-      </div>
-    </>
+    <div className={`${selected ? "border-b-4" : ""}`}>
+      <a href={href}>
+        <h1 className="text-white">{title}</h1>
+      </a>
+    </div>
   );
 };
+
+export default NavOption;
