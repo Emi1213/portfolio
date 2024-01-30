@@ -2,12 +2,13 @@
 interface Props {
 	title: string;
 	bg?: string;
-
+	size?: string;
 }
 
-const { title } = Astro.props;
+const { title, size } = Astro.props;
 const { bg } = Astro.props;
-import NavOption from "../components/NavOption.astro";
+import DesktopNav from "../components/desktopNav.astro";
+import MobileNav from "../components/mobileNav.astro";
 ---
 
 <!doctype html>
@@ -22,21 +23,14 @@ import NavOption from "../components/NavOption.astro";
 	</head>
 	<body>
 		<div class={`${bg}`}>
-			<div class="flex justify-end pr-16 shadow-md">
-					<ul class="flex justify-center items-center h-20 gap-10 ">
-							<NavOption title='Home'  href='home' />
-						</li>
-						<li>
-							<NavOption title='About' href='about' />
-						</li>
-						<li>
-							<NavOption title='Contact' href='contact' />
-						</li>
-						<li>
-							<NavOption title='Projects' href='projects' />
-						</li>
-					</ul>
-				</nav>
+			<div class="flex items-center pr-16 shadow-md sm:h-14 xl:h-20">
+				<div class="sm:block xl:hidden">
+					<MobileNav />
+				</div>
+
+				<div class="hidden xl:block w-full">
+					<DesktopNav />
+				</div>
 			</div>
 			<slot/>
 		</div>

@@ -17,6 +17,19 @@ export default {
           900: "#562d82",
           950: "#29153c",
         },
+        "bleached-cedar": {
+          50: "#f0f1fd",
+          100: "#e5e6fa",
+          200: "#cfd1f6",
+          300: "#b2b2ef",
+          400: "#9892e7",
+          500: "#8678dc",
+          600: "#765dce",
+          700: "#664db5",
+          800: "#534192",
+          900: "#453a75",
+          950: "#211b36",
+        },
       },
       spacing: {
         112: "28rem",
@@ -26,5 +39,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"],
+  },
 };
