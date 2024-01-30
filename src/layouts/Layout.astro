@@ -1,13 +1,13 @@
 ---
 interface Props {
 	title: string;
+	bg?: string;
+
 }
 
 const { title } = Astro.props;
-import NavOption from "../components/NavOption";
-import HomeRounded from "@mui/icons-material/HomeRounded";
-import Person2Rounded from "@mui/icons-material/Person2Rounded";
-import BadgeRoundedIcon from "@mui/icons-material/BadgeRounded";
+const { bg } = Astro.props;
+import NavOption from "../components/NavOption.astro";
 ---
 
 <!doctype html>
@@ -21,22 +21,24 @@ import BadgeRoundedIcon from "@mui/icons-material/BadgeRounded";
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="bg-black">
-			<ul class="flex justify-center items-center h-20">
-				<li>
-					<NavOption title='Home'  href='home' selected={true} />
-				</li>
-				<li>
-					<NavOption title='About' href='about' />
-				</li>
-				<li>
-					<NavOption title='Contact' href='contact' />
-				</li>
-				<li>
-					<NavOption title='Projects' href='projects' />
-				</li>
-			</ul>
-		</nav>
-		<slot />
+		<div class={`${bg}`}>
+			<div class="flex justify-end pr-16 shadow-md">
+					<ul class="flex justify-center items-center h-20 gap-10 ">
+							<NavOption title='Home'  href='home' />
+						</li>
+						<li>
+							<NavOption title='About' href='about' />
+						</li>
+						<li>
+							<NavOption title='Contact' href='contact' />
+						</li>
+						<li>
+							<NavOption title='Projects' href='projects' />
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<slot/>
+		</div>
 	</body>
 </html>
