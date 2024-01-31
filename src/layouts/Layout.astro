@@ -24,11 +24,10 @@ import MobileNav from "../components/mobileNav.astro";
 	<body>
 		<div class={`${bg}`}>
 			<div class="flex items-center pr-16 shadow-md sm:h-14 xl:h-20">
-				<div class="sm:block xl:hidden">
+				<div class="sm:block xl:hidden md:hidden">
 					<MobileNav />
 				</div>
-
-				<div class="hidden xl:block w-full">
+				<div class="hidden xl:block md:block w-full">
 					<DesktopNav />
 				</div>
 			</div>
