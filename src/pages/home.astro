@@ -5,12 +5,27 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Emilia Galarza" bg='bg-gradient-to-r from-bleached-cedar-800 to-teal-700'>
 	<section class="mt-6 pb-10 w-full">
 		<div class="flex justify-center items-center gap-6 w-full ">
-			<div class="sm:w-1/2">
-				<h1 class="text-white xl:text-6xl font-extrabold mt-6 sm:text-4xl">Hi, I'm  Emilia Galarza</h1>
-				<h2 class="text-fuchsia-300 xl:text-2xl font-semibold sm:text-md">Frontend Developer</h2>
-				<h3 class="text-zinc-200 mt-16 text-justify">With a passion for coding that goes beyond the surface, I delve into the depths of development frameworks and languages to produce modular, reusable code that sets the standard for high-performance applications in a constantly evolving digital landscape.</h3>
-			</div>
-			<img src="/perfil.jpg" alt="My Photo" class=" h-112 w-112 object-cover rounded-full xl:h-112 xl:w-112 sm:w-60 sm:h-60">
+				<div class="sm:block xl:hidden p-2">
+					<div class="flex items-center">
+						<div class="flex flex-col items-center pr-2">
+							<h1 class="text-white xl:text-6xl font-extrabold sm:text-4xl h-10">Hi, I'm  Emilia Galarza</h1>
+							<h2 class="text-fuchsia-300  font-semibold ">Frontend Developer</h2>
+						</div>
+						<img src="/perfil.jpg" alt="My Photo" class=" h-40 w-40 object-cover rounded-full xl:h-112 xl:w-112 md:w-60 md:h-60 sm:w-10 sm:h-10">
+					</div>
+					<h3 class="text-zinc-200 mt-8 text-justify text-xs p-2 ">With a passion for coding that goes beyond the surface, I delve into the depths of development frameworks and languages to produce modular, reusable code that sets the standard for high-performance applications in a constantly evolving digital landscape.</h3>
+
+				</div>
+
+				<div class="hidden xl:block w-full">
+					<div class="w-1/2">
+						<h1 class="text-white xl:text-6xl font-extrabold mt-6 sm:text-4xl">Hi, I'm  Emilia Galarza</h1>
+						<h2 class="text-fuchsia-300 xl:text-2xl font-semibold sm:text-md">Frontend Developer</h2>
+						<h3 class="text-zinc-200 mt-16 text-justify ">With a passion for coding that goes beyond the surface, I delve into the depths of development frameworks and languages to produce modular, reusable code that sets the standard for high-performance applications in a constantly evolving digital landscape.</h3>
+					</div>
+					<img src="/perfil.jpg" alt="My Photo" class=" h-40 w-40 object-cover rounded-full xl:h-112 xl:w-112 md:w-60 md:h-60 sm:w-10 sm:h-10">
+				</div>
+
 		</div>
 	</section>
 	<section class="bg-white">
