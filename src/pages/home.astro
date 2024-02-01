@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout title="Welcome to Emilia Galarza" bg='bg-gradient-to-r from-bleached-cedar-800 to-teal-700'>
@@ -12,10 +13,26 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 							<img src="/perfil.jpg" alt="My Photo" class="h-40 w-40 object-cover rounded-full xl:h-112 xl:w-112 md:w-72 md:h-72 sm:w-44 sm:h-44 xl:ml-24 ">
 					</div>
-					<h3 class="text-zinc-200 mt-2  text-xs text-justify pr-4 pl-4 xl:text-xl md:text-lg md:pl-14 md:pr-14 sm:text-xs xl:pl-16 xl:pr-16 sm:mr-8 sm:ml-8  ">With a passion for coding that goes beyond the surface, I delve into the depths of development frameworks and languages to produce modular, reusable code that sets the standard for high-performance applications in a constantly evolving digital landscape.</h3>
+					<!-- <h3 class="text-zinc-200 mt-2  text-xs text-justify pr-4 pl-4 xl:text-xl md:text-lg md:pl-14 md:pr-14 sm:text-xs xl:pl-28 xl:pr-28 sm:mr-8 sm:ml-8  ">With a passion for coding that goes beyond the surface, I delve into the depths of development frameworks and languages to produce modular, reusable code that sets the standard for high-performance applications in a constantly evolving digital landscape.</h3> -->
 				</div>
 		</div>
 	</section>
+	<section class="bg-white text-black pt-10 pb-14 mt-10 flex ">
+		<div class="xl:ml-16 w-1/2  grid items-center ">
+			<div class="p-4 ">
+				<h2 class="text-xl font-bold pb-3 sm:text-lg xl:text-4xl md:text-2xl text-teal-600">A bit about Me</h2>
+				<p class="text-xs xl:text-xl md:text-lg sm:text-xs text-justify sm:pb-2 xl:pb-6 text-purple-950">As a Software Engineering student, my journey through the world of programming is filled with the thrill of learning and practical challenge. I've engaged in academic projects that sharpen problem-solving and analytical thinking, mirroring real-world tech scenarios.
+				</p>
+				<p class="xl:text-xl md:text-lg sm:text-xs text-justify text-purple-950 hidden xl:block">
+				My passion lies in leveraging programming to create accessible, sustainable solutions that drive societal progress. Eager to immerse myself in professional settings, I welcome internships or project collaborations to further my growth as an aspiring software engineer.</p>
+			</div>
+		</div>
+		<div class="w-1/2 flex items-center justify-center">
+			<img src="https://img.freepik.com/vector-premium/lenguajes-programacion-establecen-iconos_24877-765.jpg" alt="" class="h-52 sm:h-60 xl:h-96">
+
+		</div>
+	</section>
 	<section class="bg-white">
+			<ContactForm />
 	</section>
 </Layout>
